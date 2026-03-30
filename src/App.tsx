@@ -1,15 +1,16 @@
-import { useState } from 'react'
- 
-import './App.css'
+import { RouterProvider } from "react-router-dom";
+import "./App.css";
+import { ToastContainer } from "react-toastify";
+import { AppRouter } from "./routes/AppRouter";
+import { toastConfig } from "./config/toast.config";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-   <div className='text-2xl text-green-700 font-bold h-screen flex items-center justify-center'>AI POWERED RESUME ANALYSER</div>
+      <RouterProvider router={AppRouter} />
+      <ToastContainer {...toastConfig} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

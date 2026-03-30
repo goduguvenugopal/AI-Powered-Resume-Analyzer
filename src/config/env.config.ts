@@ -1,4 +1,7 @@
 export const env = {
+
+  api_base_url : import.meta.env.VITE_API_URL,
+
   firebase: {
     apiKey:            import.meta.env.VITE_FIREBASE_API_KEY as string,
     authDomain:        import.meta.env.VITE_FIREBASE_AUTH_DOMAIN as string,
